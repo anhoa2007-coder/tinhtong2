@@ -1,24 +1,29 @@
-### tui ko compile đc nên tạm up tạm
-#### chứ app lỗi ơi là lỗi, rất khó chịu
-cách hoạt động
-cho s bằng 3k6 rồi lấy biến dài rộng này nọ
-giả sử rộng cũ là x, dài cũ là y. theo đề kêu thì rộng cộng 30 và dài cộng 20 bằng nhau hết đi thì...
-```
-x*y - 30*x + 20*y - 600 = 3600
-vì x*y = 3600 nên:
--30x + 20y - 600 = 0
-=> 30x - 20y = -600
-=> 3x - 2y = -60  (chia cả 2 vế cho 10)
-kết hợp với x*y = 3600
-giải hệ phương trình:
-y = 3600 / x
-thay vào: 3x - 2*(3600/x) = -60
-nhân 2 vế với x: 3x² + 120 = -60x ? Đợi, ta làm lại chính xác hơn:
-từ 3x - 2y = -60
-    // y = 3600 / x
-    // => 3x - 2*(3600/x) = -60
-    // nhân cả 2 vế với x: 3x² - 7200 = -60x
-    // => 3x² + 60x - 7200 = 0
-    // => x² + 20x - 2400 = 0  (chia 3)
-```
+# 📘 Tóm tắt bài toán: Tính chu vi ban đầu của thửa đất
 
+## 📝 Đề bài
+- Một thửa đất hình chữ nhật có diện tích ban đầu là **3600 m²**.  
+- Nếu **tăng chiều rộng thêm 20 m** và **giảm chiều dài đi 30 m**, diện tích vẫn **không đổi**.  
+- Yêu cầu: Tìm **chu vi ban đầu** của thửa đất.  
+
+## 📥 Dữ liệu vào
+- Một số thực `S`: diện tích ban đầu của thửa đất (m²).  
+
+## 📤 Dữ liệu ra
+- Một số thực duy nhất: chu vi ban đầu của thửa đất (m), làm tròn 2 chữ số thập phân.  
+
+## 🔍 Ví dụ
+| Input | Output |
+|-------|--------|
+| 3600  | 260.00 |
+
+## 💡 Ý tưởng giải
+- Gọi `x` là chiều rộng ban đầu, `y` là chiều dài ban đầu.  
+- Ta có hệ phương trình:
+  - `x * y = 3600`
+  - `(x + 20) * (y - 30) = 3600`
+- Giải hệ để tìm `x, y`.  
+- Chu vi:  
+  - `P = 2 * (x + y)`
+
+## ✅ Kết quả
+- Chu vi ban đầu: **260.00 m**
